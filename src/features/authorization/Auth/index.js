@@ -1,5 +1,5 @@
 import React from "react";
-import { Div, Title, Form } from "./style";
+import { Div, Title, Form, Button } from "./style";
 import Label from "./Label";
 
 const Auth = (props) => {
@@ -17,7 +17,7 @@ const Auth = (props) => {
                         <Label label="E-mail: " placeholder="email" />
                     </>
                 ) : ""}
-
+                <Button>Zatwierdź</Button>
             </Form>
         </Div>
     )
