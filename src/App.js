@@ -1,7 +1,6 @@
 import React from 'react';
 import { HashRouter, Switch, Route} from "react-router-dom";
-import SignIn from './features/authorization/SignIn';
-import SignUp from './features/authorization/SignUp';
+import Auth from './features/authorization/Auth';
 import Navigation from "./Navigation";
 import { toSignIn, toSignUp } from "./routes";
 
@@ -10,13 +9,12 @@ function App() {
   return (
     <HashRouter>
       <Navigation />
-
       <Switch>
         <Route path={toSignIn()}>
-          <SignIn />
+          <Auth title="Logowanie"/>
         </Route>
         <Route path={toSignUp()}>
-          <SignUp />
+          <Auth title="Rejestracja"/>
         </Route>
       </Switch>
     </HashRouter>
