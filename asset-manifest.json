@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/UEKTheGame/static/js/main.4fd63973.chunk.js",
+    "main.js.map": "/UEKTheGame/static/js/main.4fd63973.chunk.js.map",
+    "runtime-main.js": "/UEKTheGame/static/js/runtime-main.b9ce85a9.js",
+    "runtime-main.js.map": "/UEKTheGame/static/js/runtime-main.b9ce85a9.js.map",
+    "static/js/2.2908b3c6.chunk.js": "/UEKTheGame/static/js/2.2908b3c6.chunk.js",
+    "static/js/2.2908b3c6.chunk.js.map": "/UEKTheGame/static/js/2.2908b3c6.chunk.js.map",
+    "index.html": "/UEKTheGame/index.html",
+    "static/js/2.2908b3c6.chunk.js.LICENSE.txt": "/UEKTheGame/static/js/2.2908b3c6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9ce85a9.js",
+    "static/js/2.2908b3c6.chunk.js",
+    "static/js/main.4fd63973.chunk.js"
+  ]
+}
