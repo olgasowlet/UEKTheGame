@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: center;
 `;
 
 export const Label = styled.label`
@@ -20,6 +20,7 @@ export const Input = styled.input`
 `;
 
 export const SpanError = styled.span`
-    font-size: 16px;
+    font-size: 12px;
     color: red;
+    grid-column: 2;
 `;

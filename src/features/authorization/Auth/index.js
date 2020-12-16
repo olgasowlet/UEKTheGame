@@ -21,19 +21,19 @@ const Auth = (props) => {
                 validationSchema={Yup.object({
                     firstName: Yup.string()
                         .max(15, 'Must be 15 characters or less')
-                        .required('*'),
+                        .required('Required'),
                     lastName: Yup.string()
                         .max(20, 'Must be 20 characters or less')
-                        .required('*'),
+                        .required('Required'),
                     email: Yup.string()
                         .email('Invalid email address')
-                        .required('*'),
+                        .required('Required'),
                     nickname: Yup.string()
                         .max(20, 'Must be 20 characters or less')
-                        .required('*'),
+                        .required('Required'),
                     password: Yup.string()
                         .min(8, "Must be more than 8 characters")
-                        .required('*'),
+                        .required('Required'),
                 })}
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
