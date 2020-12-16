@@ -36,6 +36,10 @@ const Auth = (props) => {
                         .required('Required'),
                 })}
                 onSubmit={(values, { setSubmitting }) => {
+                    if (values.password) {
+                        values.password = require('password-hash').generate(values.password);
+                    }
+
                     setTimeout(() => {
                         alert(JSON.stringify(values, null, 2));
                         setSubmitting(false);
