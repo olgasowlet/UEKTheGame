@@ -10,5 +10,5 @@ export default () => {
                 <Li><StyledNavedLink to={toSignUp()}>Zarejestruj się</StyledNavedLink></Li>
             </Ul>
         </nav>
-    )
+    );
 };
