@@ -15,12 +15,9 @@ export const StyledNavedLink = styled(NavLink).attrs(() => ({
     text-decoration: none;
     color: ${(({ theme }) => theme.color.white)};
     padding: 15px;
-    border-radius: 45px;
 
     &.${activeClassName} {
-        background-color: ${(({ theme }) => theme.color.white)};
-        color: ${(({ theme }) => theme.color.green)};
-        opacity: 0.8;
+        font-weight: bold;
     }
 `;
 
@@ -35,7 +32,6 @@ export const Ul = styled.ul`
 export const Li = styled.li`
     list-style: none;
     font-size: 24px;
-    font-weight: bold;
     margin: 20px;
     transition: transform 1s;
 
