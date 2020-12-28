@@ -33,7 +33,7 @@ export const Li = styled.li`
     list-style: none;
     font-size: 24px;
     margin: 20px;
-    transition: transform 1s;
+    transition: transform 0.5s;
 
     &:hover {
         transform: scale(1.1);

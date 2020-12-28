@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Div = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 4fr;
     align-items: center;
 `;
 

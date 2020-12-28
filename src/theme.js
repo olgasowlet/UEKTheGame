@@ -5,5 +5,10 @@ export const theme = {
         white: "white",
         mercury: "#E8E8E8",
         mineshaft: "#2E2C2C",
+    },
+    size: {
+        mobile_y: '375px',
+        mobile_x: '640px',
+        tablet: '865px',
     }
 }

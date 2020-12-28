@@ -17,7 +17,7 @@ const Auth = (props) => {
             >
                 <Form>
                     <MyTextInput
-                        label="Nazwa użytkownika: "
+                        label="Nazwa: "
                         name="nickname"
                         type="text"
                         placeholder="np. robszy"
