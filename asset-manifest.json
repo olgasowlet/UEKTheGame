@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/UEKTheGame/static/js/main.0ecf6c89.chunk.js",
-    "main.js.map": "/UEKTheGame/static/js/main.0ecf6c89.chunk.js.map",
+    "main.js": "/UEKTheGame/static/js/main.c1245db4.chunk.js",
+    "main.js.map": "/UEKTheGame/static/js/main.c1245db4.chunk.js.map",
     "runtime-main.js": "/UEKTheGame/static/js/runtime-main.b9ce85a9.js",
     "runtime-main.js.map": "/UEKTheGame/static/js/runtime-main.b9ce85a9.js.map",
-    "static/js/2.2908b3c6.chunk.js": "/UEKTheGame/static/js/2.2908b3c6.chunk.js",
-    "static/js/2.2908b3c6.chunk.js.map": "/UEKTheGame/static/js/2.2908b3c6.chunk.js.map",
+    "static/js/2.5f2c4c13.chunk.js": "/UEKTheGame/static/js/2.5f2c4c13.chunk.js",
+    "static/js/2.5f2c4c13.chunk.js.map": "/UEKTheGame/static/js/2.5f2c4c13.chunk.js.map",
     "index.html": "/UEKTheGame/index.html",
-    "static/js/2.2908b3c6.chunk.js.LICENSE.txt": "/UEKTheGame/static/js/2.2908b3c6.chunk.js.LICENSE.txt"
+    "static/js/2.5f2c4c13.chunk.js.LICENSE.txt": "/UEKTheGame/static/js/2.5f2c4c13.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b9ce85a9.js",
-    "static/js/2.2908b3c6.chunk.js",
-    "static/js/main.0ecf6c89.chunk.js"
+    "static/js/2.5f2c4c13.chunk.js",
+    "static/js/main.c1245db4.chunk.js"
   ]
 }
