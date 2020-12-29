@@ -25,6 +25,10 @@ export const Title = styled.p`
     font-size: 3em;
     font-weight: bold;
     margin: 10px 10px 30px 10px;
+
+    @media (max-width: ${(({ theme }) => theme.size.mobile_y)}) {
+        font-size: 2em;
+    }
 `;
 
 export const Button = styled.button`
@@ -41,5 +45,9 @@ export const Button = styled.button`
     &:hover{
         opacity: 0.7;
         transform: scale(1.1);
+    }
+
+    @media (max-width: ${(({ theme }) => theme.size.mobile_y)}) {
+        padding: 10px 20px;
     }
 `;
