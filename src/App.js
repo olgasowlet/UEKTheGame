@@ -1,6 +1,6 @@
 import React from 'react';
 import LandingPage from "./LandingPage";
-import UserPanel from "./features/UserPanel";
+import UserPanel from "./UserPanel";
 
 
 
