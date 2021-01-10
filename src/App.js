@@ -1,27 +1,14 @@
 import React from 'react';
-import { HashRouter, Switch, Route} from "react-router-dom";
-import Auth from './features/authorization/Auth';
-import Navigation from "./Navigation";
 import LandingPage from "./LandingPage";
-import { toLandingPage, toSignIn, toSignUp } from "./routes";
+import UserPanel from "./features/UserPanel";
+
 
 
 function App() {
+  const loggedIn = true;
+
   return (
-    <HashRouter>
-      <Navigation />
-      <Switch>
-        <Route path={toSignIn()}>
-          <Auth title="Logowanie"/>
-        </Route>
-        <Route path={toSignUp()}>
-          <Auth title="Rejestracja"/>
-        </Route>
-        <Route path={toLandingPage()}>
-          <LandingPage />
-        </Route>
-      </Switch>
-    </HashRouter>
+    loggedIn ? <UserPanel /> : <LandingPage />
   );
 }
 
