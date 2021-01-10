@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
+import { loginUser } from "../../../fetchAPI";
 
-export const initialValues={
+export const initialValues = {
     firstName: '',
     lastName: '',
     email: '',
@@ -22,17 +23,15 @@ export const validationSchema = Yup.object({
         .max(20, 'Must be 20 characters or less')
         .required('Required'),
     password: Yup.string()
-        .min(8, "Must be more than 8 characters")
+        .min(2, "Must be more than 8 characters")
         .required('Required'),
 });
 
-export const onSubmit=(values, { setSubmitting }) => {
-    if (values.password) {
-        values.password = require('password-hash').generate(values.password);
-    }
+export const onSubmit = (values) => {
+    // if (values.password) {
+    //     values.password = require('password-hash').generate(values.password);
+    // };
+    console.log("button submitted");
 
-    setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
-        setSubmitting(false);
-    }, 400);
+    loginUser({ username: values.nickname, password: values.password }).then(resp => console.log(resp));
 };

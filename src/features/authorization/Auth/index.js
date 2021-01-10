@@ -50,7 +50,7 @@ const Auth = (props) => {
                             />
                         </>
                     ) : ""}
-                    <Button>Zatwierdź</Button>
+                    <Button type="submit">Zatwierdź</Button>
                 </Form>
             </Formik>
         </Div>
