@@ -5,7 +5,7 @@ import UserPanel from "./UserPanel";
 
 
 function App() {
-  const loggedIn = true;
+  const loggedIn = false;
 
   return (
     loggedIn ? <UserPanel /> : <LandingPage />

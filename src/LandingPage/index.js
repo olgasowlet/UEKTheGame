@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter, Switch, Route} from "react-router-dom";
 import Auth from '../features/authorization/Auth';
-import Navigation from "../Navigation";
+import Navigation from "./Navigation";
 import Content from "./content/index";
 import { toLandingPage, toSignIn, toSignUp } from "../routes";
 
