@@ -28,10 +28,8 @@ export const validationSchema = Yup.object({
 });
 
 export const onSubmit = (values) => {
-    // if (values.password) {
-    //     values.password = require('password-hash').generate(values.password);
-    // };
+
     console.log("button submitted");
 
-    loginUser({ username: values.nickname, password: values.password }).then(resp => console.log(resp));
+    loginUser({ username: values.nickname, password: values.password }).then(resp => localStorage.setItem('user', JSON.stringify(resp)));
 };

@@ -5,7 +5,7 @@ import UserPanel from "./UserPanel";
 
 
 function App() {
-  const loggedIn = false;
+  const loggedIn = localStorage.getItem('user') ? true : false;
 
   return (
     loggedIn ? <UserPanel /> : <LandingPage />
