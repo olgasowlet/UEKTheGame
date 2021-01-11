@@ -1,9 +1,10 @@
 import React from 'react';
 import { HashRouter, Switch, Route} from "react-router-dom";
-import Auth from '../features/authorization/Auth';
+import SignUp from '../features/authorization/Auth/SignUp';
 import Navigation from "./Navigation";
 import Content from "./content/index";
 import { toLandingPage, toSignIn, toSignUp } from "../routes";
+import SignIn from '../features/authorization/Auth/SignIn';
 
 
 const LandingPage = () => {
@@ -12,10 +13,10 @@ const LandingPage = () => {
       <Navigation />
       <Switch>
         <Route path={toSignIn()}>
-          <Auth title="Logowanie"/>
+          <SignIn title="Logowanie"/>
         </Route>
         <Route path={toSignUp()}>
-          <Auth title="Rejestracja"/>
+          <SignUp title="Rejestracja"/>
         </Route>
         <Route path={toLandingPage()}>
           <Content />
