@@ -15,9 +15,9 @@ export const validationSchema = Yup.object({
         .required('Required'),
 });
 
-export const onSubmit = (values) => {
+export const signIn = (values) => {
 
     console.log("button submitted");
 
-    loginUser({ username: values.nickname, password: values.password }).then(resp => localStorage.setItem('user', JSON.stringify(resp)));
+    loginUser(values.nickname, values.password).then(resp => localStorage.setItem('user', JSON.stringify(resp)));
 };

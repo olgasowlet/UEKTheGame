@@ -18,7 +18,7 @@ const SignUp = (props) => {
                 <Form>
                     <MyTextInput
                         label="Nazwa: "
-                        name="nickname"
+                        name="username"
                         type="text"
                         placeholder="np. robszy"
                     />
