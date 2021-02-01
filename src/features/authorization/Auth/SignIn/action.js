@@ -15,9 +15,18 @@ export const validationSchema = Yup.object({
         .required('Required'),
 });
 
-export const signIn = (values) => {
+export const fetchToken = (values) => {
+    const token = loginUser(values.nickname, values.password);
+    return token;
+}
+
+export const setTokenToLocalStorage = (token) => {
 
     console.log("button submitted");
 
-    loginUser(values.nickname, values.password).then(resp => localStorage.setItem('user', JSON.stringify(resp)));
+    localStorage.setItem('user', token);
 };
+
+export const getTokenFromLocalStorage = () => {
+    return JSON.parse(localStorage.getItem('user')) || false;
+}

@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Form } from 'formik';
 import { Div, Title, Button } from "../style";
 import { MyTextInput } from "../../FormElements";
-import { initialValues, validationSchema, signIn } from "./action";
+import { initialValues, validationSchema, setTokenToLocalStorage } from "./action";
 
 const SignIn = (props) => {
     return (
@@ -13,7 +13,7 @@ const SignIn = (props) => {
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={signIn}
+                onSubmit={setTokenToLocalStorage}
             >
                 <Form>
                     <MyTextInput

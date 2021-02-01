@@ -5,7 +5,7 @@ import UserPanel from "./UserPanel";
 
 
 function App() {
-  const loggedIn = true;
+  const loggedIn = false;
   console.log(loggedIn);
   // info o tym, czy jest zalogowany użytkownik przechowywać w storze
   return (
