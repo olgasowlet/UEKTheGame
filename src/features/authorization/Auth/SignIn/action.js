@@ -1,5 +1,4 @@
 import * as Yup from 'yup';
-import { loginUser } from "../authService";
 
 export const initialValues = {
     username: '',
@@ -14,16 +13,3 @@ export const validationSchema = Yup.object({
         .min(2, "Must be more than 8 characters")
         .required('Required'),
 });
-
-// export const fetchToken = (values) => {
-//     const token = loginUser(values.nickname, values.password);
-//     return token;
-// }
-
-export const setTokenToLocalStorage = (token) => {
-    localStorage.setItem('user', JSON.stringify(token));
-};
-
-export const getTokenFromLocalStorage = () => {
-    return JSON.parse(localStorage.getItem('user')) || false;
-}

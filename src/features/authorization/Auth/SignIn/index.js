@@ -1,10 +1,10 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { Formik, Form } from 'formik';
 import { Div, Title, Button } from "../style";
 import { MyTextInput } from "../../FormElements";
-import { initialValues, validationSchema, fetchToken, displayValues } from "./action";
-import { fetchUserToken, signIn } from "../../authSlice";
-import { useDispatch } from "react-redux";
+import { initialValues, validationSchema } from "./action";
+import { signIn } from "../../authSlice";
 import { loginUser } from "../authService";
 
 const SignIn = (props) => {

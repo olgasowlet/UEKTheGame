@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getTokenFromLocalStorage } from "./Auth/SignIn/action";
+import { getTokenFromLocalStorage } from "./Auth/fetchToken";
 
 const authSlice = createSlice({
     name: "auth",
@@ -9,15 +9,11 @@ const authSlice = createSlice({
     reducers: {
         signIn: (state, {payload: response}) => {
             state.token = response;
-        },
-        fetchUserToken: () => {
-
-        },
+        }
     }
 });
 
 export const {
-    fetchUserToken,
     signIn,
 } = authSlice.actions
 
