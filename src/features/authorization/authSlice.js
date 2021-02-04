@@ -7,12 +7,12 @@ const authSlice = createSlice({
         token: getTokenFromLocalStorage(),
     },
     reducers: {
+        signIn: (state, {payload: response}) => {
+            state.token = response;
+        },
         fetchUserToken: () => {
 
         },
-        signIn: (state, {payload: response}) => {
-            state.token = response;
-        }
     }
 });
 
@@ -21,6 +21,6 @@ export const {
     signIn,
 } = authSlice.actions
 
-export const selectToken = state => state.token;
+export const selectToken = state => state.auth.token;
 
 export default authSlice.reducer;

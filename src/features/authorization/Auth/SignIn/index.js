@@ -19,7 +19,9 @@ const SignIn = (props) => {
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={(values) => dispatch(signIn(values))}
+                onSubmit={(values) => {
+                    loginUser(values).then(resposne => dispatch(signIn(resposne)))
+                }}
             >
                 <Form>
                     <MyTextInput

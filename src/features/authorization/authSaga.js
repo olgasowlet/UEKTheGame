@@ -1,14 +1,14 @@
-import { call, takeEvery } from "redux-saga/effects";
+import { call, select, takeEvery } from "redux-saga/effects";
 import { loginUser } from "./Auth/authService";
 import { setTokenToLocalStorage } from "./Auth/SignIn/action";
-import { signIn } from "./authSlice";
+import { selectToken, signIn } from "./authSlice";
 
 
-function* fetchUserTokenHandler({ payload }) {
+function* fetchUserTokenHandler() {
     try {
-        const response = yield call(loginUser, payload);
-        console.log(response)
-        yield call(setTokenToLocalStorage, response);
+        const token = yield select(selectToken);
+        console.log(token)
+        yield call(setTokenToLocalStorage, token);
     } catch (error) {
         yield call(alert, "Popsute :/");
     }
