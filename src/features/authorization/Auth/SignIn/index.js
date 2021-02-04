@@ -2,9 +2,15 @@ import React from "react";
 import { Formik, Form } from 'formik';
 import { Div, Title, Button } from "../style";
 import { MyTextInput } from "../../FormElements";
-import { initialValues, validationSchema, setTokenToLocalStorage } from "./action";
+import { initialValues, validationSchema, fetchToken, displayValues } from "./action";
+import { fetchUserToken, signIn } from "../../authSlice";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../authService";
 
 const SignIn = (props) => {
+
+    const dispatch = useDispatch();
+
     return (
         <Div>
             <Title>
@@ -13,12 +19,12 @@ const SignIn = (props) => {
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={setTokenToLocalStorage}
+                onSubmit={(values) => dispatch(signIn(values))}
             >
                 <Form>
                     <MyTextInput
                         label="Nazwa: "
-                        name="nickname"
+                        name="username"
                         type="text"
                         placeholder="np. robszy"
                     />

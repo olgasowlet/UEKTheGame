@@ -1,13 +1,13 @@
 import * as Yup from 'yup';
-import { loginUser } from "../../../../fetchAPI";
+import { loginUser } from "../authService";
 
 export const initialValues = {
-    nickname: '',
+    username: '',
     password: '',
 };
 
 export const validationSchema = Yup.object({
-    nickname: Yup.string()
+    username: Yup.string()
         .max(20, 'Must be 20 characters or less')
         .required('Required'),
     password: Yup.string()
@@ -15,16 +15,13 @@ export const validationSchema = Yup.object({
         .required('Required'),
 });
 
-export const fetchToken = (values) => {
-    const token = loginUser(values.nickname, values.password);
-    return token;
-}
+// export const fetchToken = (values) => {
+//     const token = loginUser(values.nickname, values.password);
+//     return token;
+// }
 
 export const setTokenToLocalStorage = (token) => {
-
-    console.log("button submitted");
-
-    localStorage.setItem('user', token);
+    localStorage.setItem('user', JSON.stringify(token));
 };
 
 export const getTokenFromLocalStorage = () => {

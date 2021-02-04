@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import { registerUser } from "../../../../fetchAPI";
+import { registerUser } from "../authService";
 
 export const initialValues = {
     username: '',

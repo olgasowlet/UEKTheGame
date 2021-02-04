@@ -1,11 +1,11 @@
-const loginUser = (username, password) => {
+const loginUser = (body) => {
     return (
         fetch("http://127.0.0.1:8000/api/token/", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({username, password})
+            body: JSON.stringify(body)
         }).then(response => response.json())
     )
 };
@@ -22,5 +22,9 @@ const registerUser = (body) => {
     )
 };
 
+const logout =() => {
+    localStorage.removeItem('user');
+}
 
-export { loginUser, registerUser };
+
+export { loginUser, registerUser, logout };

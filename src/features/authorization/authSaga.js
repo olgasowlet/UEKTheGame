@@ -1,15 +1,20 @@
-import { call, throttle, put, takeEvery, select } from "redux-saga/effects";
+import { call, takeEvery } from "redux-saga/effects";
+import { loginUser } from "./Auth/authService";
 import { setTokenToLocalStorage } from "./Auth/SignIn/action";
+import { signIn } from "./authSlice";
 
-function* setTokenToLocalStorageHandler() {
+
+function* fetchUserTokenHandler({ payload }) {
     try {
-        const token = yield select(selectToken);
-        yield call(saveTokenToLocalStorage, body);
+        const response = yield call(loginUser, payload);
+        console.log(response)
+        yield call(setTokenToLocalStorage, response);
     } catch (error) {
         yield call(alert, "Popsute :/");
-    };
-};
+    }
+}
 
-export default function* tasksSaga() {
-    yield takeEvery("*", setTokenToLocalStorageHandler);
+export default function* authSaga() {
+    console.log("saga dziala")
+    yield takeEvery(signIn, fetchUserTokenHandler)
 };

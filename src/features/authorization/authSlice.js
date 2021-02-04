@@ -7,8 +7,19 @@ const authSlice = createSlice({
         token: getTokenFromLocalStorage(),
     },
     reducers: {
+        fetchUserToken: () => {
+
+        },
+        signIn: (state, {payload: response}) => {
+            state.token = response;
+        }
     }
 });
+
+export const {
+    fetchUserToken,
+    signIn,
+} = authSlice.actions
 
 export const selectToken = state => state.token;
 

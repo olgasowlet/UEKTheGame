@@ -2,14 +2,17 @@ import React from 'react';
 // import { signIn } from './features/authorization/Auth/SignIn/action';
 import LandingPage from "./LandingPage";
 import UserPanel from "./UserPanel";
+import {selectToken} from "./features/authorization/authSlice"
+import { shallowEqual, useSelector } from 'react-redux';
 
 
 function App() {
   const loggedIn = false;
-  console.log(loggedIn);
+  const token = useSelector(state => selectToken(state))
+  console.log(token);
   // info o tym, czy jest zalogowany użytkownik przechowywać w storze
   return (
-      loggedIn ? <UserPanel /> : <LandingPage />
+      token ? <UserPanel /> : <LandingPage />
   );
 }
 
