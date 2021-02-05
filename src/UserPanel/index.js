@@ -6,14 +6,17 @@ import UserProfile from "./UserProfile";
 
 const UserPanel = () => {
     return (
-        <HashRouter>
-            <Navigation />
-            <Switch>
-                <Route path={toUserProfile()}>
-                    <UserProfile />
-                </Route>
-            </Switch>
-        </HashRouter>
+        <>
+            <HashRouter>
+                <Navigation />
+                <Switch>
+                    <Route path={toUserProfile()}>
+                        <UserProfile />
+                    </Route>
+                </Switch>
+            </HashRouter>
+        </>
+
     );
 };
 

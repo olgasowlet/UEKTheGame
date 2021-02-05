@@ -14,3 +14,7 @@ export const StyledNavedLink = styled(NavLink).attrs(() => ({
         font-weight: bold;
     }
 `;
+
+export const Nav = styled.nav`
+    background-color: ${(({ theme }) => theme.color.green)};
+`;

@@ -4,7 +4,7 @@ import { Formik, Form } from 'formik';
 import { Div, Title, Button } from "../style";
 import { MyTextInput } from "../../FormElements";
 import { initialValues, validationSchema } from "./action";
-import { signIn } from "../../authSlice";
+import { addToken } from "../../authSlice";
 import { loginUser } from "../authService";
 
 const SignIn = (props) => {
@@ -20,7 +20,7 @@ const SignIn = (props) => {
                 initialValues={initialValues}
                 validationSchema={validationSchema}
                 onSubmit={(values) => {
-                    loginUser(values).then(resposne => dispatch(signIn(resposne)))
+                    loginUser(values).then(resposne => dispatch(addToken(resposne)))
                 }}
             >
                 <Form>

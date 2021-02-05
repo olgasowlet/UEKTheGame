@@ -1,13 +1,19 @@
 import React from "react";
-import { StyledNavedLink } from "./style";
+import { StyledNavedLink, Nav } from "./style";
 import { toUserProfile } from "../routes";
+import { useDispatch } from "react-redux";
+import { removeToken } from "../../features/authorization/authSlice";
 
 export default () => {
+
+    const dispatch = useDispatch();
+
     return (
-        <nav>
+        <Nav>
             <ul>
                 <li><StyledNavedLink to={toUserProfile()}>Profil</StyledNavedLink></li>
             </ul>
-        </nav>
+            <button onClick={() => dispatch(removeToken())}>Wyloguj się</button>
+        </Nav>
     );
 };
