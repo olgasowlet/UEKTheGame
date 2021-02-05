@@ -6,7 +6,15 @@ const loginUser = (body) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(body)
-        }).then(response => response.json())
+        })
+            .then(response => {
+                if (response.status === 401) {
+                    throw new Error('Network response was not ok');
+                } else {
+                    return response.json()
+                };       
+            })
+            .catch(error => console.log(error))
     )
 };
 
@@ -22,7 +30,7 @@ const registerUser = (body) => {
     )
 };
 
-const logout =() => {
+const logout = () => {
     localStorage.removeItem('user');
 }
 
