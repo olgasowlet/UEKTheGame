@@ -1,17 +1,28 @@
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
-import { toUserProfile } from "./routes";
-import Navigation from "./Navigation";
-import UserProfile from "./UserProfile";
+import { toQuests, toRewards, toSettings, toUserProfile } from "./routes";
+import SideBar from "./SideBar";
+import TopBar from "./TopBar";
+import DashboardContainer from "./DashboardContainer";
 
 const UserPanel = () => {
     return (
         <>
             <HashRouter>
-                <Navigation />
+                <TopBar />
+                <SideBar />
                 <Switch>
                     <Route path={toUserProfile()}>
-                        <UserProfile />
+                        <DashboardContainer title="Profil" />
+                    </Route>
+                    <Route path={toQuests()}>
+                        <DashboardContainer title="Questy" />
+                    </Route>
+                    <Route path={toRewards()}>
+                        <DashboardContainer title="Nagrody" />
+                    </Route>
+                    <Route path={toSettings()}>
+                        <DashboardContainer title="Ustawienia" />
                     </Route>
                 </Switch>
             </HashRouter>
