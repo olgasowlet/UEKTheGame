@@ -18,7 +18,7 @@ const SignUp = (props) => {
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={values => registerUser(values).then(setMsg('msg'))}
+                onSubmit={values => registerUser(values).then(resp => resp ? setMsg('msg') : alert('Użytkownik o takiej nazwie już istnieje'))}
             >
                 {msg === 'none' ? <Form>
                     <MyTextInput

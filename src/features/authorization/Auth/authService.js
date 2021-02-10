@@ -26,7 +26,14 @@ const registerUser = (body) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(body)
-        }).then(response => response.json())
+        }).then(response => {
+            if (response.status === 400) {
+                throw new Error('User with that username already exists');
+            } else {
+                return response.json()
+            };       
+        })
+        .catch(error => console.log(error))
     )
 };
 
