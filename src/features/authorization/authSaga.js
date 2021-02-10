@@ -1,4 +1,4 @@
-import { call, put, select, takeEvery } from "redux-saga/effects";
+import { call, select, takeEvery } from "redux-saga/effects";
 import { logout } from "./Auth/authService";
 import { setTokenToLocalStorage } from "./Auth/fetchToken";
 import { selectToken, addToken, removeToken } from "./authSlice";
@@ -22,7 +22,6 @@ function* removeTokenFromLocalStorageHandler() {
 }
 
 export default function* authSaga() {
-    console.log("saga dziala");
     yield takeEvery(addToken, addUserTokenHandler);
     yield takeEvery(removeToken, removeTokenFromLocalStorageHandler)
 };

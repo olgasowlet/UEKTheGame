@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form } from 'formik';
 import { Div, Title, Button } from "../style";
 import { MyTextInput } from "../../FormElements";
-import { initialValues, validationSchema, onSubmit } from "./action";
+import { initialValues, validationSchema } from "./action";
+import { registerUser } from "../authService";
+import Message from "./Message";
 
 const SignUp = (props) => {
+
+    const [msg, setMsg] = useState('none');
+
     return (
         <Div>
             <Title>
@@ -13,9 +18,9 @@ const SignUp = (props) => {
             <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={onSubmit}
+                onSubmit={values => registerUser(values).then(setMsg('msg'))}
             >
-                <Form>
+                {msg === 'none' ? <Form>
                     <MyTextInput
                         label="Nazwa: "
                         name="username"
@@ -30,13 +35,13 @@ const SignUp = (props) => {
                     />
                     <MyTextInput
                         label="Imię: "
-                        name="firstName"
+                        name="first_name"
                         type="text"
                         placeholder="np. Robert"
                     />
                     <MyTextInput
                         label="Nazwisko: "
-                        name="lastName"
+                        name="last_name"
                         type="text"
                         placeholder="np. Szydło"
                     />
@@ -47,7 +52,7 @@ const SignUp = (props) => {
                         placeholder="np. xxxxxx@gmail.com"
                     />
                     <Button type="submit">Zatwierdź</Button>
-                </Form>
+                </Form> : <Message/>}
             </Formik>
         </Div>
     )
