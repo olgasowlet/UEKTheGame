@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+// Zrobić animacje ease-out na wysuwanie się side bar i ease-in na wsuwanie
+
 const activeClassName = "active";
 
 export const StyledNavedLink = styled(NavLink).attrs(() => ({
