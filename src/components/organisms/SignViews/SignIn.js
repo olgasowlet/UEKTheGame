@@ -1,11 +1,11 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Formik, Form } from 'formik';
-import { Div, Title, Button } from "../style";
-import { MyTextInput } from "../../FormElements";
-import { initialValues, validationSchema } from "./action";
-import { addToken } from "../../authSlice";
-import { loginUser } from "../authService";
+import { Div, Title, Button } from "./style";
+import { MyTextInput } from "../../molecules/FormElements/FormElements";
+import { initialValues, validationSchema } from "./SignInAction";
+import { addToken } from "../../../hooks/authorization/authSlice";
+import { loginUser } from "../../../hooks/Auth/authService";
 
 const SignIn = (props) => {
 

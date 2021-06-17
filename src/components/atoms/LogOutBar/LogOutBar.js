@@ -2,8 +2,8 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import { Nav, Button } from "./style";
-import { removeToken } from "../../features/authorization/authSlice";
+import { Nav, Button } from "./LogOutBar.style";
+import { removeToken } from "../../../hooks/authorization/authSlice";
 
 export default () => {
 

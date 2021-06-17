@@ -1,6 +1,6 @@
 import { call, select, takeEvery } from "redux-saga/effects";
-import { logout } from "./Auth/authService";
-import { setTokenToLocalStorage } from "./Auth/fetchToken";
+import { logout } from "../Auth/authService";
+import { setTokenToLocalStorage } from "../Auth/fetchToken";
 import { selectToken, addToken, removeToken } from "./authSlice";
 
 

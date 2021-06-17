@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getTokenFromLocalStorage } from "./Auth/fetchToken";
+import { getTokenFromLocalStorage } from "../../hooks/Auth/fetchToken";
 
 const authSlice = createSlice({
     name: "auth",

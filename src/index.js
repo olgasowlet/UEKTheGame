@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from "styled-components";
-import GlobalStyles from "./GlobalStyles";
+import GlobalStyles from "./assets/styles/GlobalStyles";
 import App from './App';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-import { theme } from "./theme";
+import { theme } from "./assets/styles/theme";
 import store from "./store";
 
 ReactDOM.render(

@@ -1,6 +1,6 @@
 import React from "react";
-import { toSignIn, toSignUp, toLandingPage } from "../routes";
-import { StyledNavedLink, Nav, Li, Ul, BackToHome } from "./style";
+import { toSignIn, toSignUp, toLandingPage } from "../../../routes";
+import { StyledNavedLink, Nav, Li, Ul, BackToHome } from "./NavBar.style";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 

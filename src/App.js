@@ -1,8 +1,8 @@
 import React from 'react';
 // import { signIn } from './features/authorization/Auth/SignIn/action';
-import LandingPage from "./LandingPage";
-import UserPanel from "./UserPanel";
-import {selectToken} from "./features/authorization/authSlice"
+import { LandingPage } from "./views/LandingPage/LandingPage";
+import  { UserPanel }  from "./components/organisms/UserPanel/UserPanel";
+import {selectToken} from "./hooks/authorization/authSlice"
 import { useSelector } from 'react-redux';
 
 

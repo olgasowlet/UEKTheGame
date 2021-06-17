@@ -1,6 +1,6 @@
 import React from "react";
-import { StyledNavedLink, SideBar, Li, Ul } from "./style";
-import { toSettings, toUserProfile, toQuests, toRewards, toRanking } from "../routes";
+import { StyledNavedLink, SideBar, Li, Ul } from "./SideBar.style";
+import { toSettings, toUserProfile, toQuests, toRewards, toRanking } from "../../../helpers/routes";
 
 export default () => {
 
