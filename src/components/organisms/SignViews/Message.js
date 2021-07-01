@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
-import { Button } from "../../style";
-import {toSignIn} from "../../../../../LandingPage/routes";
+import { Button } from "./style";
+import {toSignIn} from "../../../routes";
 
 const Message = () => {
 
     const [redirect, setRedirect] = useState(false);
-
     return (
         <>
             { redirect ? <Redirect to={toSignIn()} /> :

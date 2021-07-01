@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Formik, Form } from 'formik';
-import { Div, Title, Button } from "../style";
-import { MyTextInput } from "../../FormElements";
-import { initialValues, validationSchema } from "./action";
-import { registerUser } from "../authService";
+import { Div, Title, Button } from "./style";
+import { MyTextInput } from "../../molecules/FormElements/FormElements";
+import { initialValues, validationSchema } from "./SignInAction";
+import { registerUser } from "../../../hooks/Auth/authService";
 import Message from "./Message";
 
 const SignUp = (props) => {

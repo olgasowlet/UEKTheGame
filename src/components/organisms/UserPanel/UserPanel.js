@@ -1,15 +1,15 @@
 import React from "react";
 import { HashRouter, Switch, Route } from "react-router-dom";
-import { toQuests, toRanking, toRewards, toSettings, toUserProfile } from "./routes";
-import SideBar from "./SideBar";
-import TopBar from "./TopBar";
-import DashboardContainer from "./DashboardContainer";
+import { toQuests, toRanking, toRewards, toSettings, toUserProfile } from "../../../helpers/routes";
+import SideBar from "../../molecules/SideBar/SideBar";
+import LogOutBar from "../../atoms/LogOutBar/LogOutBar";
+import DashboardContainer from "../../molecules/DashboardContainer/DashboardContainer";
 
-const UserPanel = () => {
+export const UserPanel = () => {
     return (
         <>
             <HashRouter>
-                <TopBar />
+                <LogOutBar />
                 <SideBar />
                 <Switch>
                     <Route path={toUserProfile()}>
@@ -34,4 +34,3 @@ const UserPanel = () => {
     );
 };
 
-export default UserPanel;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useField } from 'formik';
-import { Label, Input, Div, SpanError } from "./style";
+import { Label, Input, Div, SpanError } from "./FormElements.style";
 
-const MyTextInput = ({ label, ...props }) => {
+ export const MyTextInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
     return (
         <Div>
@@ -14,5 +14,3 @@ const MyTextInput = ({ label, ...props }) => {
         </Div>
     );
 };
-
-export { MyTextInput };

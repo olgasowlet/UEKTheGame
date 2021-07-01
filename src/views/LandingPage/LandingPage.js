@@ -1,13 +1,13 @@
 import React from 'react';
 import { HashRouter, Switch, Route} from "react-router-dom";
-import SignUp from '../features/authorization/Auth/SignUp';
-import Navigation from "./Navigation";
-import Content from "./content/index";
-import { toLandingPage, toSignIn, toSignUp } from "./routes";
-import SignIn from '../features/authorization/Auth/SignIn';
+import SignUp from '../../components/organisms/SignViews/SignUp';
+import Navigation from "../../components/organisms/Navigation/NavBar";
+import Content from "../Content";
+import { toLandingPage, toSignIn, toSignUp } from "../../routes";
+import SignIn from '../../components/organisms/SignViews/SignIn';
 
 
-const LandingPage = () => {
+export const LandingPage = () => {
   return (
     <HashRouter>
       <Navigation />
@@ -25,5 +25,3 @@ const LandingPage = () => {
     </HashRouter>
   );
 }
-
-export default LandingPage;
