@@ -5,7 +5,6 @@ import  { UserPanel }  from "./components/organisms/UserPanel/UserPanel";
 import {selectToken} from "./hooks/authorization/authSlice"
 import { useSelector } from 'react-redux';
 
-
 function App() {
   const token = useSelector(state => selectToken(state))
   return (
