@@ -4,7 +4,7 @@ import { toQuests, toRanking, toRewards, toSettings, toUserProfile } from "../..
 import SideBar from "../../molecules/SideBar/SideBar";
 import LogOutBar from "../../atoms/LogOutBar/LogOutBar";
 import DashboardContainer from "../../molecules/DashboardContainer/DashboardContainer";
-
+import { QuestsList } from "../QuestsList/QuestsList";
 export const UserPanel = () => {
     return (
         <>
@@ -16,7 +16,7 @@ export const UserPanel = () => {
                         <DashboardContainer title="Profil" />
                     </Route>
                     <Route path={toQuests()}>
-                        <DashboardContainer title="Questy" />
+                        <QuestsList title="Questy"/>
                     </Route>
                     <Route path={toRewards()}>
                         <DashboardContainer title="Nagrody" />
@@ -27,6 +27,7 @@ export const UserPanel = () => {
                     <Route path={toSettings()}>
                         <DashboardContainer title="Ustawienia" />
                     </Route>
+                    
                 </Switch>
             </HashRouter>
         </>
